@@ -1,23 +1,25 @@
 'use strict';
 
+// const util = require('util');
 const events = require('../eventPool');
 
 events.on('pickedUp', pickedUp);
 events.on('inTransit', inTransit);
 events.on('delivered', delivered);
 
-let order = {
-  time: new Date().getTime,
-  payload: {
-    store: 'Quick Stop',
-    orderId:Math.floor(Math.random() * 100),
-    customer: 'Bob',
-    address: 'Newark, NJ',
-  }
+// let order = {
+// time: new Date().getTime,
+let payload = {
+  store: 'Quick Stop',
+  orderId:Math.floor(Math.random() * 100),
+  customer: 'Bob',
+  address: 'Newark, NJ',
 };
+// };
 
 const vendorOrder = () => {
-  events.emit('order for pickup', order);
+  events.emit('order for pickup', payload);
+  console.log('order for pickup', payload);
 };
 
 function pickedUp(orderId) {
@@ -35,4 +37,4 @@ function delivered(orderId) {
 //   events.emit('pickup', Event);
 // }, 3000);
 
-module.exports = { vendorOrder, setInterval, pickedUp, inTransit, delivered };
+module.exports = { vendorOrder, pickedUp, inTransit, delivered };
