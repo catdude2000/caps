@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/catdude2000/caps/issues"
   },
-  "homepage": "https://github.com/catdude2000/caps#readme"
+  "homepage": "https://github.com/catdude2000/caps#readme",
+  "dependencies": {
+    "events": "^3.3.0"
+  }
 }
