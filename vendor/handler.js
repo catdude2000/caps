@@ -18,7 +18,7 @@ let payload = {
 // };
 
 const vendorOrder = () => {
-  events.emit('order for pickup', payload);
+  events.emit('pickup', payload);
   console.log('order for pickup', payload);
 };
 
@@ -26,15 +26,15 @@ function pickedUp(orderId) {
   console.log(`Vendor: I see order ${orderId} was picked up`);
 }
 function inTransit(orderId) {
-  console.log({event: 'in-transit'}, orderId);
+  console.log({event: 'inTransit'}, orderId);
 }
 function delivered(orderId) {
-  console.log({event: 'delivered'}, `Vendor: Thank you for delivering ${orderId}`);
+  console.log({event: 'delivered'}, 'Vendor: Thank you for delivering ', orderId);
 }
 
-// setInterval(() => {
+setInterval(() => {
   
-//   events.emit('pickup', Event);
-// }, 3000);
+  events.emit('pickup', payload);
+}, 3000);
 
 module.exports = { vendorOrder, pickedUp, inTransit, delivered };
