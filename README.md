@@ -32,4 +32,4 @@ Unit Tests: npm run test
 
 (Created with Figma)
 
-![UML](/lab12uml.png)
+![UML](/lab11uml.png)
