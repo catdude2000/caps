@@ -9,15 +9,10 @@ Code Academy Parcel Service (CAPS)
 ### Links and Resources
 
 -[Repo](https://github.com/catdude2000/caps)  
--[Render Deploy](https://)
 
 ### Collaborators  
 
 Emily Greason
-
-### Setup
-
-#### .env requirements (where applicable)
 
 #### Running the app
 
@@ -26,7 +21,7 @@ clone repo
 
 #### Tests
 
-Unit Tests: npm run test
+Unit Tests: npm test
 
 #### UML
 

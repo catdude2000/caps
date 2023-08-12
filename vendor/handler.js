@@ -1,6 +1,5 @@
 'use strict';
 
-// const util = require('util');
 const events = require('../eventPool');
 
 events.on('pickedUp', pickedUp);

@@ -1,20 +1,17 @@
 'use strict';
 
-
-const driverHandler = require('../driver/handler');
+const { pickup } = require('../driver/handler');
 const payload = {
-  data: {
-    store: 'Quick Stop',
-    orderId: '3', //does this matter?
-    customer: 'Bob',
-    address: 'Newark, NJ',
-  }
+  store: 'Quick Stop',
+  orderId: '3', 
+  customer: 'Bob',
+  address: 'Newark, NJ',
 };
 
 describe('Are the events calling the functions?', () => {
   test('Should call driver function', () => {
     const spy = jest.spyOn(console, 'log');
-    driverHandler(payload);
+    pickup(payload);
     expect(spy).toHaveBeenCalled();
   });
 });

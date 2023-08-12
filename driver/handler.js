@@ -1,9 +1,6 @@
 'use strict';
 
 const events = require('../eventPool');
-// const {vendorOrder } = require('../vendor/handler');
-
-
 
 const pickup = (payload) => {
   console.log({event: 'pickup'}, 'Vendor: I have an order to be picked up', payload);
