@@ -28,3 +28,5 @@ setInterval(() => {
   };
   events.emit('pickup', Event);
 }, 3000);
+
+module.exports = { pickedUp, inTransit, delivered };

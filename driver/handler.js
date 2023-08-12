@@ -11,3 +11,5 @@ function pickup(data) {
   events.emit('inTransit', data);
   events.emit('delivered', data);
 }
+
+module.exports = pickup;
