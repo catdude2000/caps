@@ -27,4 +27,4 @@ Unit Tests: npm test
 
 (Created with Figma)
 
-![UML](/lab11uml.png)
+![UML](assets/lab11uml.png)

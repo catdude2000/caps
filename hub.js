@@ -1,5 +1,6 @@
 'use strict';
 
+const { Server } = require('socket.io');
 const events = require('./eventPool');
 
 require('./driver/handler');
