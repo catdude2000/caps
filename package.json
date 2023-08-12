@@ -1,0 +1,19 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "401 caps lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdude2000/caps.git"
+  },
+  "author": "Mike Pace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catdude2000/caps/issues"
+  },
+  "homepage": "https://github.com/catdude2000/caps#readme"
+}
