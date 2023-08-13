@@ -1,7 +1,7 @@
 'use strict';
 
 const events = require('../utility');  //not in demo
-const client = require('./index');
+const client = require('./index');  //wrong import?
 
 const ready = (payload) => {
   console.log('Vendor: I have an order to be picked up');

@@ -1,6 +1,6 @@
 'use strict';
 
-const { pickup } = require('../driver/handler');
+const { pickup } = require('./handler');
 const payload = {
   store: 'Quick Stop',
   orderId: '3', 

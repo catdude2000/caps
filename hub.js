@@ -1,7 +1,7 @@
 'use strict';
 
 const { Server } = require('socket.io');
-const events = require('./utility');
+const events = require('./clients/utility');
 
 const io = new Server();
 
