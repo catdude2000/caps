@@ -1,15 +1,17 @@
 'use strict';
 
-const events = require('../eventPool');
+const events = require('../utility');  //not in demo
+const client = require('./index');
 
-const pickup = (payload) => {
-  console.log({event: 'pickup'}, 'Vendor: I have an order to be picked up', payload);
-
-  events.emit('pickedup', payload);
-  events.emit('inTransit', payload);
-  events.emit('delivered', payload);
+const ready = (payload) => {
+  console.log('Vendor: I have an order to be picked up');
+  setTimeout(() => {
+    client.emit(events.inTransit, payload);
+  }, 2000);
+  setTimeout(() => {
+    console.log('The package has been delivered');
+    client.emit(events.delivered, payload);
+  }, 5000);
 };
 
-events.on('pickup', pickup);
-
-module.exports = { pickup };
+module.exports = { ready };
