@@ -1,8 +1,13 @@
 'use strict';
 
-const events = require('../eventPool');
+const { io } = require('socket.io-client');
+const events = require('../utility');
 const { pickup } = require('./handler');
 
-pickup(events);
+const client = io('ws://localhost:3000/caps');
+client.on(events.announcement, (payload) => console.log(payload.message));
+client.on(events.ready, pickup);
 
-module.exports = { events };
+// pickup(events);
+
+module.exports = { client };

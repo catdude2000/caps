@@ -1,5 +1,5 @@
 module.exports = {
-  pickup: 'pickup',
+  pickUp: 'pickup',
   pickedUp: 'pickedup', //watch capitalization
   inTransit: 'inTransit',
   delivered: 'delivered',
